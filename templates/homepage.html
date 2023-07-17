@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leukemia Detection</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Recursive&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+<body>
+  <header>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-header">
+        <div class="title-header">
+          <a class="navbar-brand fw-bold" href="#">Leukemia Early Detection</a>
+        </div>
+        <div class="nav-header">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class=" nav-header navbar-nav m-auto mb-2 mb-lg-0 justify-content-end">
+            <li class="nav-item mx-3"><a href="#about">About the Project</a></li>
+            <li class="nav-item mx-3"><a href="{{url_for('detectLeukemia')}}">Detect</a></li>
+            <li class="nav-item mx-3"><a href="#get-in-touch">Get in touch</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<div class="container-t">
+  <!--Detect Leukemia-->
+  <div class="container-main">
+
+    <h1>Leukemia Detection And Classification Using CNN</h1>
+    <div class="text-center">
+      <img src="{{ url_for('static', filename='/images/doctor.jpg') }}" class="rounded" alt="..." style="width: 200px; height: auto;">
+    </div>
+    <div class="upload-form">
+      <form action="/detectLeukemia" method="GET">
+        <input type="submit" value="Detect Leukemia" class="upload-btn">
+      </form>
+    </div>
+  </div>
+  <!--About Start-->
+    <main id="about">
+      <div class="about mt-5 mb-5">
+        <div class="container-p" >
+          <!--Section head Start-->
+          <h2 class="h2-responsive fw-bold text-center my-2">
+            About
+          </h2>
+          <p class="text-center w-responsive mx-auto mb-1">Acute Leukemia is a disease in which infected White Blood Cells perform abnormally.
+              There have two main categories of Leukemia which is Acute and chronic.  Nithyaa, Kumar, Gokul & Aananthi (2021) stated that,
+              a common type of Acute Leukemia is Acute lymphocytic Leukemia and Acute myeloid Leukemia, which develop faster and more rapidly,
+              nd the adult population is highly affected by this type of cancer. Hence, automated detection and classification using image processing
+              is introduced to examine the microscopic blood smears images and more accurately to detect Leukemia. Therefore this method has a great
+              ability to learn highly abstracted feature of object and more efficient to identify object. </p>
+        </div>
+      </div>
+
+    </main>
+ </div>
+  <!--About End-->
+
+  <!-- Footer Start-->
+    <footer class="text-center text-lg-start text-white">
+
+      <!-- Section: Links  -->
+      <section class="" >
+        <div class="container-header text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Products
+              </h6>
+              <p>
+                <a href="#!" class="text-reset" >About Leukemia</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Useful links
+              </h6>
+              <p>
+                <a href="https://my.clevelandclinic.org/health/diseases/4365-leukemia#:~:text=A%20bone%20marrow%20biopsy%20helps,your%20bones%2C%20organs%20or%20tissue." class="text-reset">About</a>
+              </p>
+              <p>
+                <a href="" class="text-reset">Github</a>
+              </p>
+              <p>
+                <a href="#contact" class="text-reset">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fa fa-home me-3"></i> Malaysian, Selangor</p>
+              <p>
+                <i class="fa fa-envelope me-3"></i>
+                2020609086@student.uitm.edu.my
+              </p>
+              <p><i class="fa fa-phone me-3"></i> 011-XXXXXXXX</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div class="text-center p-4 bg-dark" style="background-color: rgba(0, 0, 0, 0);">
+        © 2023 Copyright
+          <a class="text-reset fw-bold" href="">Nadiah Zaimi</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer End-->
+
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-************" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-************" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
